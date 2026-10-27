@@ -569,6 +569,53 @@ a.prod:hover .prod__go .ico{transform:translate(2px,-2px)}
 .net .dev__copy{position:static;max-width:760px}
 @media (max-width:900px){.net .net__flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:420px){.net .net__flow{grid-template-columns:1fr}}
+
+/* ===== krane family bar (Apple-style global nav) ===== */
+.family{background:#141413;color:#CFCDC8;font-size:13px;line-height:18px}
+.family__in{display:flex;align-items:center;gap:16px;height:36px;min-width:0}
+.family__home{display:inline-flex;align-items:center;gap:8px;color:#F3F2EF;text-decoration:none;font-weight:600;flex:none;padding:4px 0}
+.family__home img{width:14px;height:auto;display:block}
+.family__home:hover{color:#FFFFFF}
+.family__home[aria-current="page"]{color:#FFFFFF}
+.family__sep{width:1px;height:14px;background:#3A3A38;flex:none}
+.family__links{display:flex;align-items:center;gap:22px;overflow-x:auto;scrollbar-width:none;min-width:0;height:100%}
+.family__links::-webkit-scrollbar{display:none}
+.family__link{position:relative;display:inline-flex;align-items:center;gap:6px;height:100%;white-space:nowrap;color:#CFCDC8;text-decoration:none;transition:color .15s}
+.family__link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--p);transform:scaleX(0);transform-origin:left;transition:transform .2s ease-out}
+a.family__link:hover{color:#FFFFFF}
+a.family__link:hover::after{transform:scaleX(.5)}
+.family__link[aria-current="page"]{color:#FFFFFF;font-weight:600}
+.family__link[aria-current="page"]::after{transform:scaleX(1)}
+.family__link--soon{color:#8E8D89;cursor:default}
+.family__link em{font-style:normal;font-size:10px;line-height:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8E8D89;border:1px solid #3A3A38;border-radius:4px;padding:0 4px}
+.family a:focus-visible{outline:2px solid var(--violet);outline-offset:2px;border-radius:2px}
+@media (max-width:520px){.family__link--soon{display:none}.family__links{gap:18px}}
+
+/* ===== product switcher (Rippling-style) ===== */
+.sw{position:relative;display:flex;align-items:center;margin-left:-24px}
+.sw__btn{all:unset;cursor:pointer;width:28px;height:28px;display:grid;place-items:center;border-radius:var(--r-md);color:var(--ink-2);transition:background-color .15s,color .15s}
+.sw__btn .ico{width:18px;height:18px;transition:transform .2s ease-out}
+.sw__btn:hover{background:var(--paper);color:var(--ink)}
+.sw__btn[aria-expanded="true"]{background:var(--paper);color:var(--ink)}
+.sw__btn[aria-expanded="true"] .ico{transform:rotate(180deg)}
+.sw__btn:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.sw__menu{position:fixed;top:0;left:0;width:min(400px,calc(100vw - 32px));max-height:calc(100vh - 120px);overflow-y:auto;background:var(--bg);border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:0 18px 48px rgba(0,0,0,.16);padding:8px;z-index:80;animation:rise .18s ease-out}
+.sw__head{margin:0;padding:10px 12px 8px;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.sw__item{display:grid;grid-template-columns:4px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px;border-radius:var(--r-md);text-decoration:none;color:var(--ink)}
+a.sw__item:hover,a.sw__item:focus-visible{background:var(--paper);outline:none}
+.sw__item[aria-current="page"]{background:var(--paper)}
+.sw__item--soon{opacity:.6}
+.sw__bar{align-self:stretch;border-radius:2px}
+.sw__body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.sw__body .lockup img{height:18px}
+.sw__line{font-size:13px;line-height:18px;color:var(--ink-2)}
+.sw__status,.sw__here{font-size:11px;line-height:16px;font-weight:600;white-space:nowrap;border-radius:var(--r-sm);padding:2px 7px;border:1px solid var(--hair);color:var(--ink-2)}
+.sw__here{border-color:transparent;background:var(--ink);color:var(--bg)}
+.sw__foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px;padding:12px;border-top:1px solid var(--hair);font-size:14px;line-height:20px;font-weight:600;color:var(--purple-text);text-decoration:none}
+.sw__foot .ico{width:16px;height:16px;transition:transform .2s}
+.sw__foot:hover .ico{transform:translate(2px,-2px)}
+.sw__foot:focus-visible{outline:2px solid var(--violet);outline-offset:-2px;border-radius:var(--r-md)}
+
 /* theme toggle */
 .theme-btn{all:unset;cursor:pointer;width:36px;height:36px;display:grid;place-items:center;border-radius:var(--r-md);color:var(--ink-2)}
 .theme-btn:hover{background:var(--paper);color:var(--ink)}

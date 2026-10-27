@@ -65,9 +65,24 @@ img{max-width:100%}
     <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></symbol>
   </defs>
 </svg>
+<div class="family" role="navigation" aria-label="krane products">
+  <div class="wrap family__in">
+    <a class="family__home" href="/"><img src="/img/krane-mark-white.png" alt="" width="14" height="15">krane</a>
+    <span class="family__sep" aria-hidden="true"></span>
+    <div class="family__links"><a class="family__link" href="/kredit/" style="--p:var(--violet)">kranekredit</a><a class="family__link" href="/finance/" style="--p:var(--orange)" aria-current="page">kranefinance</a><span class="family__link family__link--soon" style="--p:#CD413A">kranead<em>Soon</em></span><span class="family__link family__link--soon" style="--p:#E1BF41">getkrane<em>Soon</em></span></div>
+  </div>
+</div>
 <header class="nav">
   <div class="wrap nav__in">
     <a class="lockup" href="#f-top" aria-label="kranefinance home"><img class="on-light" src="/img/kranefinance-lockup-ink.png" alt="kranefinance" style="height:24px"><img class="on-dark" src="/img/kranefinance-lockup-white.png" alt="kranefinance" style="height:24px"></a>
+    <div class="sw">
+      <button class="sw__btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="sw-menu" aria-label="Switch krane product"><svg class="ico" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></svg></button>
+      <div class="sw__menu" id="sw-menu" role="menu" hidden>
+        <p class="sw__head">krane products</p>
+        <a class="sw__item" role="menuitem" href="/"><span class="sw__bar" style="background:var(--purple)"></span><span class="sw__body"><span class="lockup"><img class="on-light" src="/img/krane-lockup-ink.png" alt="krane"><img class="on-dark" src="/img/krane-lockup-white.png" alt="krane"></span><span class="sw__line">The house behind the products. Infrastructure for upward mobility.</span></span><span class="sw__status">Home</span></a><a class="sw__item" role="menuitem" href="/kredit/"><span class="sw__bar" style="background:var(--violet)"></span><span class="sw__body"><span class="lockup"><img class="on-light" src="/img/kranekredit-lockup-ink.png" alt="kranekredit"><img class="on-dark" src="/img/kranekredit-lockup-white.png" alt="kranekredit"></span><span class="sw__line">Credit decisioning infrastructure for lenders.</span></span><span class="sw__status">Pilot open</span></a><a class="sw__item" role="menuitem" href="/finance/" aria-current="page"><span class="sw__bar" style="background:var(--orange)"></span><span class="sw__body"><span class="lockup"><img class="on-light" src="/img/kranefinance-lockup-ink.png" alt="kranefinance"><img class="on-dark" src="/img/kranefinance-lockup-white.png" alt="kranefinance"></span><span class="sw__line">Electric vehicle finance, with swap, charge and care.</span></span><span class="sw__here">You are here</span></a><div class="sw__item sw__item--soon" role="menuitem" aria-disabled="true"><span class="sw__bar" style="background:#CD413A"></span><span class="sw__body"><span class="lockup"><img class="on-light" src="/img/kranead-lockup-ink.png" alt="kranead"><img class="on-dark" src="/img/kranead-lockup-white.png" alt="kranead"></span><span class="sw__line">Advertising on moving vehicles.</span></span><span class="sw__status">Coming soon</span></div><div class="sw__item sw__item--soon" role="menuitem" aria-disabled="true"><span class="sw__bar" style="background:#E1BF41"></span><span class="sw__body"><span class="lockup"><img class="on-light" src="/img/getkrane-lockup-ink.png" alt="getkrane"><img class="on-dark" src="/img/getkrane-lockup-white.png" alt="getkrane"></span><span class="sw__line">One app for your financial standing.</span></span><span class="sw__status">Coming soon</span></div>
+        <a class="sw__foot" href="/">Visit krane.finance <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
     <nav class="nav__links" aria-label="kranefinance">
       <a href="#f-vehicles">Vehicles</a>
       <a href="#f-how">How it works</a>

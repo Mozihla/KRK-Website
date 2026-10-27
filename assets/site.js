@@ -278,3 +278,30 @@ async function exportXlsx(){
   try { await dl.save({ filename: `kranekredit-demo-requests-${stamp}.xlsx`, data: new Uint8Array(buf) }); say(`Exported ${adminRows.length} request${adminRows.length === 1 ? "" : "s"}.`); }
   catch(e){ if (e && e.code !== "declined") say("The export didn't save. Try again in a moment."); }
 }
+
+/* ---------- Product switcher ---------- */
+(function(){
+  const sw = document.querySelector(".sw"); if (!sw) return;
+  const btn = sw.querySelector(".sw__btn"), menu = sw.querySelector(".sw__menu");
+  const items = () => [...menu.querySelectorAll("a.sw__item, .sw__foot")];
+  const place = () => {
+    const r = btn.getBoundingClientRect(), w = menu.offsetWidth, vw = document.documentElement.clientWidth;
+    menu.style.top = Math.round(r.bottom + 12) + "px";
+    menu.style.left = Math.round(Math.max(16, Math.min(r.left - 160, vw - w - 16))) + "px";
+  };
+  const open = (focusFirst) => { menu.hidden = false; place(); btn.setAttribute("aria-expanded", "true"); if (focusFirst) (menu.querySelector('a.sw__item:not([aria-current])') || items()[0]).focus(); };
+  const close = (refocus) => { if (menu.hidden) return; menu.hidden = true; btn.setAttribute("aria-expanded", "false"); if (refocus) btn.focus(); };
+  btn.addEventListener("click", e => { e.stopPropagation(); menu.hidden ? open(false) : close(false); });
+  btn.addEventListener("keydown", e => { if (e.key === "ArrowDown") { e.preventDefault(); open(true); } });
+  menu.addEventListener("keydown", e => {
+    const list = items(), i = list.indexOf(document.activeElement);
+    if (e.key === "ArrowDown") { e.preventDefault(); list[(i + 1) % list.length].focus(); }
+    if (e.key === "ArrowUp") { e.preventDefault(); list[(i - 1 + list.length) % list.length].focus(); }
+    if (e.key === "Escape") { e.preventDefault(); close(true); }
+    if (e.key === "Tab") close(false);
+  });
+  document.addEventListener("click", e => { if (!sw.contains(e.target)) close(false); });
+  addEventListener("resize", () => { if (!menu.hidden) place(); });
+  addEventListener("scroll", () => { if (!menu.hidden) place(); }, { passive: true });
+  addEventListener("keydown", e => { if (e.key === "Escape") close(true); });
+})();
