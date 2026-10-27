@@ -49,6 +49,10 @@ Your email runs on the domain's MX records, the website on its A/CNAME records. 
 
 Each submission becomes a row on the **Demo requests** tab (Stage: New), and an email goes to founders@krane.finance.
 
+## After editing styles or scripts
+
+Run `python3 scripts/stamp-assets.py` before committing changes to `assets/site.css`, `assets/site.js` or `config.js`. It updates the `?v=` stamps in all three pages, so visitors get the new files immediately instead of a cached copy.
+
 ## Before going public
 
 - Every sample score, plan price, swap station and table is labelled "Sample". Replace with real figures as they exist.
