@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>kranefinance: Own the vehicle that moves you</title>
+<meta name="description" content="Electric cars, motorcycles, tricycles, scooters and bicycles, financed against what you earn every day. Swap, charge and service on one network, then own it outright.">
+<link rel="canonical" href="https://krane.finance/finance/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="krane">
+<meta property="og:title" content="kranefinance: Own the vehicle that moves you">
+<meta property="og:description" content="Electric cars, motorcycles, tricycles, scooters and bicycles, financed against what you earn every day. Swap, charge and service on one network, then own it outright.">
+<meta property="og:url" content="https://krane.finance/finance/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#5806C3">
+<link rel="icon" type="image/png" href="/img/krane-mark-purple.png">
+<link rel="apple-touch-icon" href="/img/krane-mark-purple.png">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 19.5c1.4-3.2 4-4.8 7-4.8s5.6 1.6 7 4.8"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M4 7h7M4 17h7M11 7l4 5-4 5M15 12h5"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M6 20h12M5 8h14M5 8l-2.5 6h5zM19 8l-2.5 6h5z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v6c0 4.2-3 7.4-7 8.5-4-1.1-7-4.3-7-8.5V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><path d="M5 19V14M10 19V10M15 19V7M20 19V4"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l2.8-2.8a4 4 0 0 0-5.7-5.7l-1.2 1.2"/><path d="M14 10a4 4 0 0 0-5.7 0l-2.8 2.8a4 4 0 0 0 5.7 5.7l1.2-1.2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6.5h11M9 12h11M9 17.5h11M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4.5h11l-2 4 2 4H5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></symbol>
+    <symbol id="v-car" viewBox="0 0 24 24"><path d="M3.5 16.5v-3.2l2.2-5.1A1.5 1.5 0 0 1 7.1 7.3h9.8a1.5 1.5 0 0 1 1.4.9l2.2 5.1v3.2"/><path d="M3.5 13h17M9.5 16.5h5"/><circle cx="6.8" cy="16.8" r="1.8"/><circle cx="17.2" cy="16.8" r="1.8"/></symbol>
+    <symbol id="v-moto" viewBox="0 0 24 24"><circle cx="5.5" cy="16.5" r="3"/><circle cx="18.5" cy="16.5" r="3"/><path d="M5.5 16.5 9 10.5h5.5l4 6M14 10.5l1.2-3.5H18M9 10.5 7.6 8H11"/></symbol>
+    <symbol id="v-keke" viewBox="0 0 24 24"><path d="M3.5 15.5V9.2A2.7 2.7 0 0 1 6.2 6.5h7.3l4.5 5v4"/><path d="M3.5 11.5H18M3.5 15.5h17"/><circle cx="7" cy="17.3" r="1.8"/><circle cx="18" cy="17.3" r="1.8"/></symbol>
+    <symbol id="v-scooter" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="2"/><circle cx="18.5" cy="17.5" r="2"/><path d="M5.5 17.5h9.5L17.6 6.5H20M15 17.5l2.6-11"/></symbol>
+    <symbol id="v-bike" viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l3.8-6.5h5.4L18 16M9.8 9.5 8.6 7H6.8M15.2 9.5 14 6.5h2.2M12 16l-2.2-6.5"/></symbol>
+    <symbol id="v-van" viewBox="0 0 24 24"><path d="M3 6.5h11v10H3zM14 9.5h4l3 3.5v3.5h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24"><rect x="3" y="7.5" width="16" height="9" rx="2"/><path d="M21.5 10.5v3M11.5 9.5l-2 3h3.5l-2 3"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5.5 13.5H12L11 21l7.5-10.5H12z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 5.3a4.2 4.2 0 0 0 4.9 5.6l-8.5 8.5a2.1 2.1 0 0 1-3-3l8.5-8.5a4.2 4.2 0 0 0-1.9-2.6z"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 4 4 7l3 3M4 7h13M17 14l3 3-3 3M20 17H7"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13.5 14-14 0 9-5 14-13 14z"/><path d="M5 19l8-8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-sunpanel" viewBox="0 0 24 24"><path d="M4 18h16l-2.5-8h-11zM5.7 14h12.6M10.3 10l-.8 8M13.7 10l.8 8M12 3v2.5M6.5 5.5l1.2 1.2M17.5 5.5l-1.2 1.2"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M12 3v18M7 7h10M5.5 11h13M8 21l4-14 4 14"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></symbol>
+  </defs>
+</svg>
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="lockup" href="#f-top" aria-label="kranefinance home"><img class="on-light" src="/img/kranefinance-lockup-ink.png" alt="kranefinance" style="height:24px"><img class="on-dark" src="/img/kranefinance-lockup-white.png" alt="kranefinance" style="height:24px"></a>
+    <nav class="nav__links" aria-label="kranefinance">
+      <a href="#f-vehicles">Vehicles</a>
+      <a href="#f-how">How it works</a>
+      <a href="#f-energy">Energy network</a>
+      <a href="#f-impact">Impact</a>
+      <a href="#f-faq">FAQs</a>
+    </nav>
+    <div class="nav__cta">
+      <button class="theme-btn" type="button" aria-label="Switch theme"><svg class="ico i-dark"><use href="#i-moon"/></svg><svg class="ico i-light"><use href="#i-sun"/></svg></button>
+      <a class="nav__login" data-flogin href="#">Sign in</a>
+      <button class="btn btn--primary" type="button" data-apply>Get started</button>
+    </div>
+  </div>
+</header>
+<main id="f-top">
+  <section class="f-hero" aria-labelledby="f-hero-h">
+    <div class="wrap hero__grid">
+      <div class="hero__copy reveal">
+        <p class="eyebrow eyebrow--orange">kranefinance, by krane</p>
+        <h1 id="f-hero-h">Own the vehicle <span class="thin">that moves you.</span></h1>
+        <p class="lead">Electric cars, motorcycles, tricycles, scooters and bicycles, financed against what you earn every day. Swap, charge and service on one network. Pay as you earn, then own it outright.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary btn--lg" type="button" data-apply>Get started <svg class="ico arrow"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--secondary btn--lg" href="#f-energy">Partner with us</a>
+        </div>
+        <div class="hero__note"><span>We buy it. You own it.</span><span>Built from Africa, starting from Nigeria</span><span>Zero fuel. Zero tailpipe.</span></div>
+      </div>
+      <div class="hero__vis reveal" style="animation-delay:.12s">
+        <article class="own" aria-label="Sample kranefinance ownership plan">
+          <div class="own__flap" aria-hidden="true"></div>
+          <div class="own__top"><span>Ownership plan · Tunde A.</span><span class="sample">Sample</span></div>
+          <div class="own__veh"><svg class="ico"><use href="#v-moto"/></svg>Electric motorcycle, dispatch</div>
+          <div class="own__big"><span class="own__pct" id="own-pct">62%</span><span class="own__lbl">owned<br>week 48 of 78</span></div>
+          <div class="weeks" aria-hidden="true"><i class="paid" style="height:28%"></i><i class="paid" style="height:31%"></i><i class="paid" style="height:34%"></i><i class="paid" style="height:36%"></i><i class="paid" style="height:39%"></i><i class="paid" style="height:42%"></i><i class="paid" style="height:45%"></i><i class="paid" style="height:48%"></i><i class="paid" style="height:50%"></i><i class="paid" style="height:53%"></i><i class="paid" style="height:56%"></i><i class="paid" style="height:59%"></i><i class="paid" style="height:62%"></i><i class="paid" style="height:64%"></i><i class="paid" style="height:67%"></i><i class="paid" style="height:70%"></i><i class="" style="height:73%"></i><i class="" style="height:76%"></i><i class="" style="height:78%"></i><i class="" style="height:81%"></i><i class="" style="height:84%"></i><i class="" style="height:87%"></i><i class="" style="height:90%"></i><i class="" style="height:92%"></i><i class="" style="height:95%"></i><i class="" style="height:98%"></i></div>
+          <div class="own__rows">
+            <div><span>Weekly payment</span><span>₦32,500</span></div>
+            <div><span>Battery plan</span><span>Unlimited swaps</span></div>
+            <div><span>Swaps this week</span><span>9</span></div>
+            <div><span>Next service</span><span>14 Nov 2026</span></div>
+          </div>
+          <span class="own__chip"><svg class="ico"><use href="#i-check"/></svg>On track to own: June 2027</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="fleet" id="f-vehicles" aria-label="Vehicles we finance">
+    <div class="wrap fleet__in">
+      <div class="veh"><svg class="ico"><use href="#v-car"/></svg><strong>Electric cars</strong><span>Ride-hailing and chauffeur work</span></div>
+      <div class="veh"><svg class="ico"><use href="#v-moto"/></svg><strong>Motorcycles</strong><span>Dispatch and last-mile delivery</span></div>
+      <div class="veh"><svg class="ico"><use href="#v-keke"/></svg><strong>Tricycles</strong><span>Keke passenger and cargo routes</span></div>
+      <div class="veh"><svg class="ico"><use href="#v-van"/></svg><strong>Cargo vans</strong><span>Fleets and e-commerce logistics</span></div>
+      <div class="veh"><svg class="ico"><use href="#v-scooter"/></svg><strong>Scooters</strong><span>Short trips and campus delivery</span></div>
+      <div class="veh"><svg class="ico"><use href="#v-bike"/></svg><strong>E-bicycles</strong><span>Low-cost riders and couriers</span></div>
+    </div>
+  </div>
+
+  <section class="f-prob" aria-labelledby="f-prob-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Why kranefinance</p>
+        <h2 class="h1" id="f-prob-h">Nigeria moves on wheels it doesn't own, and fuel it can't afford.</h2>
+        <p class="lead">The people who keep Nigeria's cities moving earn every day. Most rent the vehicle they drive, buy fuel at the pump each morning, and never get the chance to own anything.</p>
+      </div>
+      <div class="problems">
+        <div class="prob"><svg class="ico"><use href="#v-car"/></svg><h3>Renting, never owning.</h3><p>Daily "balance" and work-and-pay deals take the profit from drivers and riders, and the vehicle still belongs to someone else.</p></div>
+        <div class="prob"><svg class="ico"><use href="#i-bolt"/></svg><h3>Fuel eats the margin.</h3><p>Since the end of the petrol subsidy, fuel has become the biggest daily cost of moving people and goods.</p></div>
+        <div class="prob"><svg class="ico"><use href="#i-user"/></svg><h3>Credit can't see them.</h3><p>Banks ask for payslips and collateral. Transport entrepreneurs have neither, so they get declined.</p></div>
+        <div class="prob"><svg class="ico"><use href="#i-battery"/></svg><h3>No network to keep EVs moving.</h3><p>An electric vehicle is only as good as the next charge, the next battery and the next repair. That network barely exists yet.</p></div>
+      </div>
+      <p class="bridge">kranefinance fixes all four at once: the vehicle, the credit, the energy and the upkeep.</p>
+    </div>
+  </section>
+
+  <section class="alt f-steps" id="f-how" aria-labelledby="f-how-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2 class="h1" id="f-how-h">From first ride to full ownership.</h2>
+        <p class="lead">Three steps. No payslip. No collateral. Your daily earnings are the proof.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step__n">01</span>
+          <h3>Apply</h3>
+          <p>Sign up with your phone number, share your bank or wallet statement, and pick the vehicle that fits your work.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">02</span>
+          <h3>Get approved</h3>
+          <p>kranekredit reads how you actually earn, across bank, OPay and Moniepoint statements, and sets a weekly plan you can keep.</p>
+          <div class="step__inputs">
+            <div><span>Decision</span><span>within 24 hours</span></div>
+            <div><span>Tenure</span><span>up to 36 months</span></div>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__n">03</span>
+          <h3>Ride, earn, own</h3>
+          <p>We buy the vehicle. You ride it with insurance, battery swaps and servicing included, and own it on your final payment.</p>
+          <div class="step__inputs">
+            <div><span>Insurance</span><span>comprehensive</span></div>
+            <div><span>Ownership</span><span>on final payment</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="f-suite" id="f-suite" aria-labelledby="f-suite-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">One plan, everything included</p>
+        <h2 class="h1" id="f-suite-h">Everything that keeps you moving.</h2>
+        <p class="lead">Financing is the start. Swap, Charge, Care and Cover keep the vehicle earning every day of the plan.</p>
+      </div>
+      <div class="suite">
+        <div class="suite__tabs" role="tablist" aria-label="kranefinance services">
+          <button class="stab" role="tab" id="ft-own" aria-controls="fp-own" aria-selected="true"><svg class="ico"><use href="#i-arrow"/></svg><strong>Own</strong><small>Pay-as-you-earn financing that ends in ownership.</small></button>
+          <button class="stab" role="tab" id="ft-swap" aria-controls="fp-swap" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-swap"/></svg><strong>Swap</strong><small>A charged battery in minutes, and replacements when packs wear out.</small></button>
+          <button class="stab" role="tab" id="ft-charge" aria-controls="fp-charge" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-bolt"/></svg><strong>Charge</strong><small>Charging hubs on the routes you already drive.</small></button>
+          <button class="stab" role="tab" id="ft-care" aria-controls="fp-care" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-wrench"/></svg><strong>Care</strong><small>Scheduled maintenance and repairs by EV-trained technicians.</small></button>
+          <button class="stab" role="tab" id="ft-cover" aria-controls="fp-cover" aria-selected="false" tabindex="-1"><svg class="ico"><use href="#i-shield"/></svg><strong>Cover</strong><small>Comprehensive insurance on every vehicle we finance.</small></button>
+        </div>
+        <div>
+          <div class="panel" role="tabpanel" id="fp-own" aria-labelledby="ft-own">
+            <div class="panel__bar"><span><b>Ownership plans</b> · weekly payments</span><span class="sample">Sample</span></div>
+            <div class="panel__body" style="padding:0">
+              <div class="tablewrap" style="border:0;border-radius:0">
+                <table>
+                  <thead><tr><th>Vehicle</th><th>Built for</th><th class="num">Weekly from</th><th class="num">Tenure</th></tr></thead>
+                  <tbody>
+                    <tr><td>E-bicycle</td><td>Couriers, students</td><td class="num">₦6,500</td><td class="num">12 mo</td></tr>
+                    <tr><td>Electric scooter</td><td>Short-trip delivery</td><td class="num">₦11,000</td><td class="num">12 mo</td></tr>
+                    <tr><td>Electric motorcycle</td><td>Dispatch riders</td><td class="num">₦32,500</td><td class="num">18 mo</td></tr>
+                    <tr><td>Electric tricycle</td><td>Keke operators</td><td class="num">₦48,000</td><td class="num">24 mo</td></tr>
+                    <tr><td>Electric car</td><td>Ride-hailing drivers</td><td class="num">₦115,000</td><td class="num">36 mo</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="color:var(--ink-2);font-size:14px;padding:20px 24px 24px">Deposits are optional on some plans. Every payment moves you closer to owning the vehicle, never just renting it.</p>
+            </div>
+          </div>
+          <div class="panel" role="tabpanel" id="fp-swap" aria-labelledby="ft-swap" hidden>
+            <div class="panel__bar"><span><b>Swap stations near you</b> · Lagos Mainland</span><span class="sample">Sample</span></div>
+            <div class="panel__body">
+              <div class="rows">
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-pin"/></svg>Yaba, Herbert Macaulay Way</span><span style="display:flex;align-items:center;gap:12px"><span class="meter" aria-label="14 charged packs"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="mono" style="font-size:13px">14 ready</span></span></div>
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-pin"/></svg>Ojota Motor Park</span><span style="display:flex;align-items:center;gap:12px"><span class="meter" aria-label="8 charged packs"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="mono" style="font-size:13px">8 ready</span></span></div>
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-pin"/></svg>Ikeja, Allen Avenue</span><span style="display:flex;align-items:center;gap:12px"><span class="meter" aria-label="11 charged packs"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="mono" style="font-size:13px">11 ready</span></span></div>
+              </div>
+              <div class="kv">
+                <div><span>Average swap</span><b>under 3 min</b></div>
+                <div><span>Pack health</span><b>checked every swap</b></div>
+                <div><span>Worn packs</span><b>replaced free</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel" role="tabpanel" id="fp-charge" aria-labelledby="ft-charge" hidden>
+            <div class="panel__bar"><span><b>Charging hubs</b> · rollout plan</span><span class="sample">Sample</span></div>
+            <div class="panel__body">
+              <div class="rows">
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-bolt"/></svg>Fuel station forecourts</span><span class="status status--orange">Partner sites</span></div>
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-bolt"/></svg>Motor parks and bus terminals</span><span class="status status--orange">Partner sites</span></div>
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-sunpanel"/></svg>Solar hubs in estates and markets</span><span class="status">Planned</span></div>
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-bolt"/></svg>Fleet depots, overnight charging</span><span class="status">Planned</span></div>
+              </div>
+              <p style="color:var(--ink-2);font-size:14px">Cars charge at hubs and depots. Two- and three-wheelers swap, so a dead battery never costs you a shift.</p>
+            </div>
+          </div>
+          <div class="panel" role="tabpanel" id="fp-care" aria-labelledby="ft-care" hidden>
+            <div class="panel__bar"><span><b>Service record</b> · electric tricycle</span><span class="sample">Sample</span></div>
+            <div class="panel__body">
+              <div class="rows">
+                <div class="row"><span class="l"><svg class="ico ok"><use href="#i-check"/></svg>Brake pads and tyres</span><span class="mono" style="font-size:13px">12 Sep 2026</span></div>
+                <div class="row"><span class="l"><svg class="ico ok"><use href="#i-check"/></svg>Motor and controller diagnostic</span><span class="mono" style="font-size:13px">12 Sep 2026</span></div>
+                <div class="row"><span class="l"><svg class="ico"><use href="#i-wrench"/></svg>Quarterly service</span><span class="status status--orange">Due 14 Nov</span></div>
+              </div>
+              <div class="kv">
+                <div><span>Moving parts</span><b>far fewer</b></div>
+                <div><span>Oil changes</span><b>none</b></div>
+                <div><span>Workshops</span><b>EV-trained</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel" role="tabpanel" id="fp-cover" aria-labelledby="ft-cover" hidden>
+            <div class="panel__bar"><span><b>Cover</b> · included in every plan</span></div>
+            <div class="panel__body">
+              <div class="rows">
+                <div class="row"><span class="l"><svg class="ico ok"><use href="#i-check"/></svg>Comprehensive vehicle insurance</span><span class="status status--ok">Included</span></div>
+                <div class="row"><span class="l"><svg class="ico ok"><use href="#i-check"/></svg>Battery covered under the swap plan</span><span class="status status--ok">Included</span></div>
+                <div class="row"><span class="l"><svg class="ico ok"><use href="#i-check"/></svg>Tracking and theft recovery</span><span class="status status--ok">Included</span></div>
+              </div>
+              <p style="color:var(--ink-2);font-size:14px">Protecting the vehicle protects your income. Cover is built into the weekly payment, so there is nothing extra to arrange.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="f-energy" aria-labelledby="f-energy-h">
+    <div class="wrap net">
+      <div class="dev__copy">
+        <p class="eyebrow">Energy network</p>
+        <h2 class="h1" id="f-energy-h">A charging network, built with Nigeria's energy companies.</h2>
+        <p class="lead">We bring the riders, the vehicles and the demand data. Energy partners bring power and sites. Together we build the swap and charge network Nigeria's logistics economy needs.</p>
+        <div class="sites"><span>Fuel stations</span><span>Motor parks</span><span>Estates</span><span>Markets</span><span>Fleet depots</span></div>
+        <div class="dev__actions" style="margin-top:8px">
+          <button class="btn btn--primary" type="button" data-apply data-segment="Energy company">Become an energy partner <svg class="ico arrow"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div>
+        <div class="net__flow">
+          <div class="net__step"><svg class="ico"><use href="#i-pin"/></svg><b>01 Site</b><strong>Host a hub</strong><p>Forecourts, parks and depots on high-traffic routes.</p></div>
+          <div class="net__step"><svg class="ico"><use href="#i-grid"/></svg><b>02 Power</b><strong>Supply the energy</strong><p>Grid, solar and gas-to-power, matched to each site.</p></div>
+          <div class="net__step"><svg class="ico"><use href="#i-swap"/></svg><b>03 Swap and charge</b><strong>Serve the riders</strong><p>kranefinance riders become guaranteed daily demand.</p></div>
+          <div class="net__step"><svg class="ico"><use href="#i-leaf"/></svg><b>04 Grow</b><strong>Share the upside</strong><p>Usage data shows where the next hub should go.</p></div>
+        </div>
+        <div class="roles">
+          <div><h3>What krane brings</h3><ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Financed vehicles and committed riders</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Battery packs, swap cabinets and software</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Route and demand data for every site</li>
+          </ul></div>
+          <div><h3>What energy partners bring</h3><ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Reliable power: grid, solar or gas</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Sites with space, security and access</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Operations at the station level</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="f-impact" aria-labelledby="f-impact-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Impact</p>
+        <h2 class="h1" id="f-impact-h">Cleaner cities. Higher earnings. Assets that stay.</h2>
+        <p class="lead">Every vehicle we finance replaces a fuel engine and puts an asset in the hands of the person who earns with it. We report these four numbers from our fleet, starting with the pilot.</p>
+      </div>
+      <div class="measure">
+        <div><svg class="ico"><use href="#i-arrow"/></svg><h3>Take-home pay</h3><p>What a driver keeps each week once fuel, rent and repairs stop eating the margin.</p><code>₦ / week</code></div>
+        <div><svg class="ico"><use href="#i-check"/></svg><h3>Assets owned</h3><p>Vehicles fully paid off and handed over to the people who drove them.</p><code>vehicles</code></div>
+        <div><svg class="ico"><use href="#i-battery"/></svg><h3>Fuel displaced</h3><p>Petrol never bought because the kilometres ran on electricity instead.</p><code>litres</code></div>
+        <div><svg class="ico"><use href="#i-leaf"/></svg><h3>Emissions avoided</h3><p>Tailpipe CO₂ that never entered the air of Lagos, Abuja and beyond.</p><code>tonnes CO₂</code></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" aria-labelledby="f-for-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Built for</p>
+        <h2 class="h1" id="f-for-h">Built for the people moving Nigeria.</h2>
+        <p class="lead">Built with a global perspective. Built from Africa, starting from Nigeria.</p>
+      </div>
+      <div class="built">
+        <div><h3>Ride-hailing drivers</h3><p>Drivers on Uber, Bolt, inDrive and other platforms who want to own their car.</p></div>
+        <div><h3>Dispatch and keke riders</h3><p>Riders moving parcels, food and passengers across the city every day.</p></div>
+        <div><h3>Cooperatives and unions</h3><p>Associations that want to move their members into ownership, together.</p></div>
+        <div><h3>Fleets and logistics firms</h3><p>Operators replacing fuel fleets with electric vehicles at scale.</p></div>
+      </div>
+      <div class="people">
+        <h3>Partners who make the network work.</h3>
+        <ul>
+          <li><strong>Energy companies</strong><span>Power and sites for swap and charge hubs.</span></li>
+          <li><strong>Manufacturers and dealers</strong><span>Trusted vehicles, parts and warranties. We finance, they supply.</span></li>
+          <li><strong>Lenders and investors</strong><span>Asset-backed exposure to Nigeria's electric logistics economy.</span></li>
+        </ul>
+      </div>
+      <div class="xsell" style="margin-top:72px">
+        <div>
+          <p class="eyebrow eyebrow--violet" style="margin-bottom:12px">Powered by kranekredit</p>
+          <h2>Approved on how you actually earn.</h2>
+          <p style="margin-top:12px">Every kranefinance application runs on kranekredit, krane's credit decisioning infrastructure. It reads bank statements, bureau data and daily earnings together, so a driver with no payslip still gets a fair answer.</p>
+          <a class="btn btn--secondary" href="/kredit/" style="margin-top:20px">See kranekredit <svg class="ico arrow"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="chain" aria-label="Sample decision reasons">
+          <div><b>01</b><span>Steady daily inflows from ride-hailing, 11 of 12 months</span><span class="sample" style="color:var(--ink-2)">Sample</span></div>
+          <div><b>02</b><span>Weekly payment under 30% of average earnings</span><span></span></div>
+          <div><b>03</b><span>Cooperative guarantee on record</span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="f-faq" aria-labelledby="f-faq-h">
+    <div class="wrap faq">
+      <div><p class="eyebrow">FAQs</p><h2 class="h2" id="f-faq-h" style="margin-top:12px">What drivers and partners ask us first.</h2></div>
+      <div class="faq__list">
+        <details><summary>Which vehicles do you finance?<svg class="ico"><use href="#i-plus"/></svg></summary><p>Electric cars, motorcycles, tricycles, scooters, cargo vans and e-bicycles. We also still finance trusted fuel sedans such as the Toyota Corolla for drivers not yet on a charging route, and we are open to other vehicle requests.</p></details>
+        <details><summary>Do you sell the vehicles?<svg class="ico"><use href="#i-plus"/></svg></summary><p>No. We finance them. You choose from our list of trusted manufacturers and dealers, we buy the vehicle, and you own it on your final payment.</p></details>
+        <details><summary>How long can repayments last?<svg class="ico"><use href="#i-plus"/></svg></summary><p>It depends on the vehicle and the amount, up to a maximum of 36 months. Two-wheelers usually run 12 to 18 months.</p></details>
+        <details><summary>How fast can I get on the road?<svg class="ico"><use href="#i-plus"/></svg></summary><p>Our target is 24 hours from application to decision, inspection and papers, once your documents are complete.</p></details>
+        <details><summary>Do I need a deposit?<svg class="ico"><use href="#i-plus"/></svg></summary><p>For some plans, yes. Many plans start with no deposit. A deposit lowers your weekly payment.</p></details>
+        <details><summary>What happens when my battery runs low?<svg class="ico"><use href="#i-plus"/></svg></summary><p>Two- and three-wheelers swap a flat pack for a charged one at any swap station in a few minutes. Cars charge at partner hubs and depots. Worn packs are replaced under your plan.</p></details>
+        <details><summary>Who maintains the vehicle?<svg class="ico"><use href="#i-plus"/></svg></summary><p>Scheduled maintenance is part of your plan, done by EV-trained technicians at partner workshops. We remind you before each service is due.</p></details>
+        <details><summary>Is the vehicle insured?<svg class="ico"><use href="#i-plus"/></svg></summary><p>Yes. Every vehicle we finance comes with comprehensive insurance, built into the weekly payment.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final f-final" aria-labelledby="f-final-h" style="padding-top:24px">
+    <div class="wrap">
+      <div class="final__panel">
+        <div class="flap" aria-hidden="true"></div>
+        <div>
+          <h2 id="f-final-h">Stop renting the road. Start owning it.</h2>
+          <p>Drivers, riders, cooperatives, fleets and energy partners: there's a place for you on the network.</p>
+        </div>
+        <div class="final__actions">
+          <button class="btn btn--ink btn--lg" type="button" data-apply>Get started <svg class="ico arrow"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--ink-ghost btn--lg" data-flogin href="#">Sign in</a>
+        </div>
+        <div class="contacts">
+          <div>Call<span>01-700-2000</span></div>
+          <div>Sales<span>sales@krane.finance</span></div>
+          <div>Help<span>help@krane.finance</span></div>
+          <div>Partnerships<span>business@krane.finance</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="lockup" href="#f-top" aria-label="kranefinance home"><img class="on-light" src="/img/kranefinance-lockup-ink.png" alt="kranefinance" style="height:24px"><img class="on-dark" src="/img/kranefinance-lockup-white.png" alt="kranefinance" style="height:24px"></a>
+        <p>Own the vehicle that moves you. kranefinance is a product of krane Technologies, Lagos, Nigeria.</p>
+        <a class="endorse" href="/">kranefinance, by krane <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="#f-vehicles">Vehicles</a></li><li><a href="#f-how">How it works</a></li><li><a href="#f-suite">Swap, Charge, Care</a></li><li><a href="#f-energy">Energy network</a></li></ul></div>
+      <div><h4>krane</h4><ul><li><a href="/">krane.finance</a></li><li><a href="/kredit/">kranekredit</a></li><li><a href="#f-faq">FAQs</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Terms of service</a></li><li><a href="#">Privacy policy</a></li></ul></div>
+    </div>
+    <div class="foot__base"><span>© 2026 krane Technologies Limited. Lagos, Nigeria.</span><span>Sample data on this page is illustrative.</span></div>
+  </div>
+</footer>
+
+<!-- KRANEFINANCE APPLY -->
+<div class="modal" id="apply" hidden role="dialog" aria-modal="true" aria-labelledby="apply-h">
+  <div class="sheet">
+    <aside class="sheet__aside">
+      <p class="eyebrow eyebrow--orange">Get started</p>
+      <h2 id="apply-h">Start your journey to ownership.</h2>
+      <p>Tell us who you are and what you drive. Our team will call you within one working day.</p>
+      <ul>
+        <li><svg class="ico" style="color:var(--orange-text)"><use href="#i-check"/></svg>No payslip or collateral needed</li>
+        <li><svg class="ico" style="color:var(--orange-text)"><use href="#i-check"/></svg>Insurance, swaps and servicing included</li>
+        <li><svg class="ico" style="color:var(--orange-text)"><use href="#i-check"/></svg>You own it on your final payment</li>
+      </ul>
+    </aside>
+    <div class="sheet__main">
+      <button class="x" type="button" data-close aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button>
+      <form id="apply-form" novalidate>
+        <div class="field"><label for="a-seg">I am</label>
+          <select id="a-seg" name="segment" required>
+            <option value="">Select</option><option>A driver or rider</option><option>A fleet or logistics company</option><option>A cooperative or union</option><option>Energy company</option><option>A manufacturer or dealer</option><option>A lender or investor</option>
+          </select><span class="err">Tell us who you are.</span></div>
+        <div class="f2">
+          <div class="field"><label for="a-name">Full name</label><input id="a-name" name="name" autocomplete="name" required><span class="err">Enter your name.</span></div>
+          <div class="field"><label for="a-phone">Phone number</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" placeholder="+234" required><span class="err">Enter a phone number we can call.</span></div>
+        </div>
+        <div class="f2">
+          <div class="field"><label for="a-email">Email <em>(optional)</em></label><input id="a-email" name="email" type="email" autocomplete="email"><span class="err">Check the email address.</span></div>
+          <div class="field"><label for="a-city">City</label>
+            <select id="a-city" name="city"><option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Ibadan</option><option>Kano</option><option>Benin City</option><option>Other</option></select></div>
+        </div>
+        <div class="f2">
+          <div class="field"><label for="a-veh">Vehicle</label>
+            <select id="a-veh" name="vehicle"><option>Not sure yet</option><option>Electric car</option><option>Electric motorcycle</option><option>Electric tricycle</option><option>Electric cargo van</option><option>Electric scooter</option><option>E-bicycle</option><option>Fuel sedan</option></select></div>
+          <div class="field"><label for="a-org">Company or cooperative <em>(optional)</em></label><input id="a-org" name="company" autocomplete="organization"></div>
+        </div>
+        <div class="field"><label for="a-notes">Anything else? <em>(optional)</em></label><textarea id="a-notes" name="notes" placeholder="Platforms you drive on, fleet size, sites you could host"></textarea></div>
+        <label class="consent" for="a-consent"><input id="a-consent" type="checkbox" required><span>I agree that krane may contact me about this request and store these details. We never share them.</span></label>
+        <p class="form-err" id="apply-err" hidden></p>
+        <div><button class="btn btn--primary btn--lg" type="submit" id="a-submit">Send</button></div>
+      </form>
+      <div class="done" id="apply-done" hidden>
+        <svg class="ico" style="color:var(--orange-text)"><use href="#i-check"/></svg>
+        <h3>We've got your details.</h3>
+        <p>Our team will call you within one working day. You can also reach us on 01-700-2000.</p>
+        <p class="mono" id="apply-ref"></p>
+        <div><button class="btn btn--secondary" type="button" data-close>Back to kranefinance</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEMO REQUEST -->
+<div class="modal" id="demo" hidden role="dialog" aria-modal="true" aria-labelledby="demo-h">
+  <div class="sheet">
+    <aside class="sheet__aside">
+      <p class="eyebrow eyebrow--violet">Request a demo</p>
+      <h2 id="demo-h">See kranekredit on your own applications.</h2>
+      <p>A 30-minute discovery call with our credit team. Bring 100 past applications and we'll show you what you missed.</p>
+      <ul>
+        <li><svg class="ico"><use href="#i-check"/></svg>A live decision on a sample applicant</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>How narrations and bureau conflicts are read</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Sandbox access for your engineers</li>
+      </ul>
+    </aside>
+    <div class="sheet__main">
+      <button class="x" type="button" data-close aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button>
+      <form id="demo-form" novalidate>
+        <div class="f2">
+          <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><span class="err">Enter your name.</span></div>
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">Enter a valid work email.</span></div>
+        </div>
+        <div class="f2">
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" required><span class="err">Enter your company.</span></div>
+          <div class="field"><label for="f-role">Role</label><input id="f-role" name="role" autocomplete="organization-title" placeholder="Head of Credit"></div>
+        </div>
+        <div class="f2">
+          <div class="field"><label for="f-type">Lender type</label>
+            <select id="f-type" name="lenderType" required>
+              <option value="">Select</option><option>Digital lender</option><option>Microfinance bank</option><option>Commercial bank</option><option>Digital bank</option><option>BNPL provider</option><option>Asset finance</option><option>Fintech or platform</option><option>Other</option>
+            </select><span class="err">Choose a lender type.</span></div>
+          <div class="field"><label for="f-volume">Monthly applications</label>
+            <select id="f-volume" name="volume">
+              <option value="">Select</option><option>Under 500</option><option>500 to 2,000</option><option>2,000 to 10,000</option><option>10,000 to 50,000</option><option>Over 50,000</option>
+            </select></div>
+        </div>
+        <div class="f2">
+          <div class="field"><label for="f-phone">Phone <em>(optional)</em></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+234"></div>
+          <div class="field"><label for="f-interest">Interested in</label>
+            <select id="f-interest" name="interest">
+              <option>Full platform demo</option><option>API access</option><option>Pilot programme</option><option>Partnership</option>
+            </select></div>
+        </div>
+        <div class="field"><label for="f-notes">Anything we should know? <em>(optional)</em></label><textarea id="f-notes" name="notes" placeholder="Current decisioning setup, timelines, bureaus you use"></textarea></div>
+        <label class="consent" for="f-consent"><input id="f-consent" type="checkbox" required><span>I agree that krane may contact me about this request and store these details. We never share them.</span></label>
+        <p class="form-err" id="form-err" hidden></p>
+        <div><button class="btn btn--primary btn--lg" type="submit" id="f-submit">Request a demo</button></div>
+      </form>
+      <div class="done" id="demo-done" hidden>
+        <svg class="ico"><use href="#i-check"/></svg>
+        <h3>You're on the list.</h3>
+        <p>Our credit team will reach out within two working days to book your discovery call.</p>
+        <p class="mono" id="done-ref"></p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--primary" id="book-link" href="#" target="_blank" rel="noopener" hidden><svg class="ico" style="width:18px;height:18px"><use href="#i-cal"/></svg>Pick a time now</a><button class="btn btn--secondary" type="button" data-close>Back to kranekredit</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN: request log (editors only) -->
+<button class="admin-pill" id="admin-pill" type="button" hidden><svg class="ico" style="width:16px;height:16px"><use href="#i-list"/></svg>Demo requests <b id="admin-count">0</b></button>
+<div class="modal" id="admin" hidden role="dialog" aria-modal="true" aria-labelledby="admin-h">
+  <div class="sheet sheet--wide">
+    <div class="admin-head" style="position:relative">
+      <div><h2 id="admin-h">Requests and applications</h2><p>Visible only to people who can edit this page. Newest first.</p></div>
+      <div class="admin-actions">
+        <button class="btn btn--secondary" type="button" id="admin-refresh">Refresh</button>
+        <button class="btn btn--primary" type="button" id="admin-export"><svg class="ico" style="width:16px;height:16px"><use href="#i-down"/></svg>Export to Excel</button>
+      </div>
+      <button class="x" type="button" data-close aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="admin-body" id="admin-body"><p class="admin-empty">Loading requests.</p></div>
+    <p class="admin-msg" id="admin-msg" hidden></p>
+  </div>
+</div>
+
+<script src="/config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="/assets/site.js"></script>
+</body>
+</html>
