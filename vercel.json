@@ -3,34 +3,170 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "redirects": [
-    { "source": "/Kredit", "destination": "/kredit/", "permanent": true },
-    { "source": "/Kredit/:path*", "destination": "/kredit/:path*", "permanent": true },
-    { "source": "/KREDIT", "destination": "/kredit/", "permanent": true },
-    { "source": "/kranekredit", "destination": "/kredit/", "permanent": true },
-    { "source": "/Finance", "destination": "/finance/", "permanent": true },
-    { "source": "/Finance/:path*", "destination": "/finance/:path*", "permanent": true },
-    { "source": "/FINANCE", "destination": "/finance/", "permanent": true },
-    { "source": "/kranefinance", "destination": "/finance/", "permanent": true }
+    {
+      "source": "/Kredit",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/Kredit/",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/Kredit/:path+",
+      "destination": "/kredit/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/KREDIT",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/KREDIT/",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/KREDIT/:path+",
+      "destination": "/kredit/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/kranekredit",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/kranekredit/",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/kranekredit/:path+",
+      "destination": "/kredit/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/KraneKredit",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/KraneKredit/",
+      "destination": "/kredit/",
+      "permanent": true
+    },
+    {
+      "source": "/KraneKredit/:path+",
+      "destination": "/kredit/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/Finance",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/Finance/",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/Finance/:path+",
+      "destination": "/finance/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/FINANCE",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/FINANCE/",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/FINANCE/:path+",
+      "destination": "/finance/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/kranefinance",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/kranefinance/",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/kranefinance/:path+",
+      "destination": "/finance/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/KraneFinance",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/KraneFinance/",
+      "destination": "/finance/",
+      "permanent": true
+    },
+    {
+      "source": "/KraneFinance/:path+",
+      "destination": "/finance/:path+",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/fonts/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
     },
     {
       "source": "/img/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
       ]
     }
   ]
